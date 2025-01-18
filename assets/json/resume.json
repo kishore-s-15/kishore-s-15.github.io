@@ -1,11 +1,11 @@
 {
   "basics": {
-    "name": "Albert Einstein",
-    "label": "Scientist",
+    "name": "Kishore Sampath",
+    "label": "Graduate Student Researcher",
     "image": "",
-    "email": "albert@einstein.de",
-    "phone": "(912) 123-4567",
-    "url": "https://alshedivat.github.io/al-folio/",
+    "email": "sampath.ki@northeastern.edu",
+    "phone": "(857) 891-4581",
+    "url": "https://www.linkedin.com/in/s-kishore/",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
     "location": {
       "address": "2712 Broadway St",
@@ -24,114 +24,122 @@
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
+      "name": "Khoury College of Computer Sciences, Northeastern University",
+      "position": "Graduate Student Researcher",
       "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": ["Relativity"]
-    }
-  ],
-  "volunteer": [
+      "startDate": "2024-03-01",
+      "endDate": "Present",
+      "summaryPoints": [
+        "Researched and developed a multimodal, multi-label fair classifier for clinical decision-making tasks using EHR data.",
+        "Implemented a radiology report generation pipeline by integrating a custom Faster R-CNN object detection model with Mistral 7B Instruct, achieving 10% higher accuracy and 23% improved coherence over benchmarks.",
+        "Developed a novel multimodal architecture leveraging MedBERT to unify embeddings across 7 modalities, employing self-attention for cross-modal fusion to achieve an F1 score of 0.93.",
+        "Architected a heterogeneous bagging approach for bias mitigation across intersectional demographic groups, resulting in a 6% improvement in demographic parity while preserving model utility."
+      ]
+    },
     {
-      "organization": "People's Climate March",
-      "location": "Zurich, Switzerland",
-      "position": "Lead Organizer",
+      "name": "Khoury College of Computer Sciences, Northeastern University",
+      "position": "Graduate Teaching Assistant | CS 5100 - Foundations of Artificial Intelligence",
       "url": "https://example.com",
-      "startDate": "2014-04-01",
-      "endDate": "2015-07-01",
-      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
-      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+      "startDate": "2024-01-01",
+      "endDate": "Present",
+      "summaryPoints": [
+        "Developed assignments focused on de-biasing techniques and building trustworthy DL models through adversarial training, explaining Black-box ML models through SHAP and Knowledge Distillation for Image classification.",
+        "Guided 500+ students through key concepts in Search & Constraint Satisfaction problems, Reinforcement Learning, Markov Decision Processes, Variational Autoencoders, Generative Adversarial Networks, and Transformers."
+      ]
+    },
+    {
+      "name": "Indian Institute of Technology, Madras",
+      "position": "Full Stack Data Scientist",
+      "url": "https://example.com",
+      "startDate": "2021-05-01",
+      "endDate": "2023-07-01",
+      "summaryPoints": [
+        "Developed and deployed an end-to-end NLP-based Customer Research Analysis tool with automated sentence tagging, reducing transcript processing time by 80%.",
+        "Designed a Context-aware Sentence Tagging module utilizing Zero-Shot Text classification with the BART Large MNLI model to accurately tag sentences based on user-defined keywords.",
+        "Conducted A/B testing to evaluate tagging strategies, achieving an 18% improvement in user satisfaction scores.",
+        "Built a data-driven application to optimize induction furnace operations using advanced analytics, collaborating with key stakeholders to ensure alignment with operational goals.",
+        "Developed an Insights module for exploratory data analysis based on a Tableau POC and an Analytics module for training machine learning models on furnace operational data, resulting in a 66% productivity gain for the client."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "location": "Zurich, Switzerland",
+      "institution": "Khoury College of Computer Sciences, Northeastern University",
+      "location": "Boston, MA, USA",
       "url": "https://www.uzh.ch/",
-      "area": "Software Development",
-      "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
-      "score": "10",
-      "courses": ["Theory of Relativity"]
+      "area": "Artificial Intelligence",
+      "studyType": "Master of Science",
+      "startDate": "2023-09-06",
+      "endDate": "2025-05-01",
+      "score": "3.8",
+      "courses": [
+        "Machine Learning",
+        "Unsupervised Machine Learning and Data Mining",
+        "Foundations of Artificial Intelligence",
+        "Ethics & Bias Implications in AI",
+        "Deep Learning",
+        "Machine Learning Operations (MLOps)",
+        "Algorithms",
+        "Masters Project"
+      ]
+    },
+    {
+      "institution": "SRM Institute of Science and Technology",
+      "location": "Chennai, TN, India",
+      "url": "https://www.uzh.ch/",
+      "area": "Mechanical Engineering",
+      "studyType": "Bachelor of Technology",
+      "startDate": "2016-08-01",
+      "endDate": "2020-05-31",
+      "score": "",
+      "courses": [
+        "Calculus and Solid Geometry",
+        "Advanced Calculus and Complex Analysis",
+        "Calculus of Variations and Non-Linear Programming",
+        "Partial Differential Equations",
+        "Probability and Statistics",
+        "Fourier series",
+        "Neural Networks and Fuzzy systems"
+      ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
+      "title": "Performance Based Merit Scholarship",
+      "date": "2019-01-01",
+      "awarder": "SRM Institute of Science and Technology",
       "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Machine Learning",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-location-dot"
+      "summary": "Awarded a performance-based merit scholarship for exceptional academic performance in 2019."
     },
     {
-      "name": "Quantum Computing",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-tag"
+      "title": "First Rank in University Examinations",
+      "date": "2019-01-02",
+      "awarder": "SRM Institute of Science and Technology",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "summary": "Secured First rank in the Department of Mechanical Engineering at the University examinations held in 2019."
     },
     {
-      "name": "Quantum Information",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-envelope"
+      "title": "First Place, Overall Proficiency",
+      "date": "2020-01-01",
+      "awarder": "SRM Institute of Science and Technology",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "summary": "Received the First place award for overall proficiency in the Department of Mechanical Engineering, SRM Institute of Science and Technology."
     },
     {
-      "name": "Quantum Cryptography",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-hashtag"
-    },
-    {
-      "name": "Quantum Communication",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-calendar"
-    },
-    {
-      "name": "Quantum Teleportation",
-      "date": "2018-01-01",
-      "issuer": "Stanford University",
-      "url": "https://example.com",
-      "icon": "fa-solid fa-clipboard-check"
+      "title": "Rising Star - 2021",
+      "date": "2021-12-01",
+      "awarder": "GITAA Private Limited - (IIT-M Incubated Startup)",
+      "url": "https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/",
+      "summary": "Awarded the ”Rising Star - 2021” for exceptional performance at GITAA Pvt Ltd."
     }
   ],
   "publications": [
     {
-      "name": "Zur Elektrody/namik bewegter Körper",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-06-30",
-      "url": "https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies",
-      "summary": "It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source."
-    },
-    {
-      "name": "Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1905-03-18",
-      "url": "https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt",
-      "summary": "In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921."
-    },
-    {
-      "name": "Die Grundlage der allgemeinen Relativitätstheorie",
-      "publisher": "Annalen der Physik",
-      "releaseDate": "1916-03-20",
-      "url": "https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie",
-      "summary": "The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914)."
+      "name": "Fairness at Every Intersection: Uncovering and Mitigating Intersectional Biases in Multimodal Clinical Predictions",
+      "publisher": "Arxiv Pre-print",
+      "releaseDate": "2024-11-30",
+      "url": "https://arxiv.org/html/2412.00606v1",
+      "summary": "This paper addresses the issue of intersectional biases in EHR-based clinical decision-making by examining how multiple demographic attributes interact to create disparate outcomes. The authors benchmark these biases on the MIMIC-Eye1 and MIMIC-IV ED datasets, leveraging pre-trained clinical LMs (MedBERT, Clinical BERT, Clinical BioBERT) to learn unified text representations from multimodal sources. Their proposed sub-group-specific mitigation approach demonstrates robustness across various datasets, subgroups, and embeddings, effectively tackling intersectional biases in complex EHR settings."
     }
   ],
   "skills": [
@@ -151,47 +159,81 @@
   ],
   "languages": [
     {
-      "language": "German",
-      "fluency": "Native speaker",
+      "language": "English",
+      "fluency": "Full professional proficiency",
       "icon": ""
     },
     {
-      "language": "English",
-      "fluency": "Fluent",
+      "language": "Tamil",
+      "fluency": "Native or bilingual proficiency",
+      "icon": ""
+    },
+    {
+      "language": "Hindi",
+      "fluency": "Elementary proficiency",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Physics",
+      "name": "Research Interests",
       "icon": "fa-solid fa-tag",
       "keywords": [
-        "Quantum Mechanics",
-        "Quantum Computing",
-        "Quantum Information",
-        "Quantum Cryptography",
-        "Quantum Communication",
-        "Quantum Teleportation"
+        "Statistical Machine Learning",
+        "Deep Generative Modeling",
+        "Multimodal Learning",
+        "Deep Learning",
+        "Natural Language Processing",
+        "Computer Vision"
       ]
     }
   ],
   "references": [
     {
-      "name": "Professor John Doe",
+      "name": "Aman Pandey - Undergrad Teammate",
       "icon": "fa-solid fa-laptop",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
-    },
-    {
-      "name": "Professor John Doe",
-      "icon": "fa-solid fa-thumbtack",
-      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+      "reference": "Kishore is one of the most hard working people I know. I have witnessed his passion for data science and mathematics while working on a project with him. He is a person who strives for perfection and does any work however hard it may seem with great zeal and enthusiasm. I can without a doubt say that Kishore has the ability to transform any work environment he is in with his shear perseverance and the passion he carries for his work. - Excerpt from LinkedIn Recommendations"
     }
   ],
   "projects": [
     {
-      "name": "Quantum Computing",
-      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
-      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
+      "name": "Curriculum Compass: A RAG Chatbot for Personalized Course Guidance",
+      "summaryPoints": [
+        "Engineered a Hybrid-RAG system utilizing dual retrieval strategies with cross-encoder re-ranking for retrieving course and review data, implementing query guard-rails to enhance accuracy and safety for course recommendations.",
+        "Supervised fine-tuned Qwen2.5 0.5B using QLoRA on 2.5K synthetic instructions generated via Llama3 7B, achieving notable improvements in n-gram evaluation and LLM-as-a-judge metrics, enhancing overall retrieval and generation.",
+        "Incorporated a multi-agentic workflow by combining query validation, intent analysis, dynamic retrieval, context analysis, and generation, leveraging advanced prompt-engineering and LLM feedback loops for optimized solutions.",
+        "Automated data, model training and drift detection pipelines with Apache Airflow on GCP through Cloud Composer and BigQuery. Implemented LLM tracing with Weights & Biases and data/model registry on Huggingface Hub."
+      ],
+      "startDate": "2018-01-01",
+      "endDate": "2018-01-01",
+      "url": "https://example.com"
+    },
+    {
+      "name": "Multimodal Meme Classification with Enhanced CLIP}",
+      "summaryPoints": [
+        "Architected a multi-modal classification system using CLIP with feature adapters and cosine classifiers, optimizing meme classification performance on the PrideMM dataset.",
+        "Implemented a novel Semantic-Aware initialization strategy to enhance embedding separation, achieving 76.06% and 80.27% accuracy, with AUC scores of 84.52% and 85.59% for humor and hate detection respectively."
+      ],
+      "startDate": "2018-01-01",
+      "endDate": "2018-01-01",
+      "url": "https://example.com"
+    },
+    {
+      "name": "ML Olympiad - Autism Prediction Challenge",
+      "summaryPoints": [
+        "Developed a high-performing two-level stacking ensemble classifier combining XGBoost, LightGBM, CatBoost, and Random Forest classifiers as base estimators with a final Logistic Regression model.",
+        "Resolved the unbalanced data problem using SMOTE and trained the model with stratified k-fold cross-validation, optimizing hyperparameters via a Bayesian tuning framework to achieve a test set AUC-ROC score of 0.943."
+      ],
+      "startDate": "2022-02-01",
+      "endDate": "2022-03-01",
+      "url": ""
+    },
+    {
+      "name": "Evolving Machine Unlearning: Benchmarking with Real-World Facial Datasets",
+      "summaryPoints": [
+        "Benchmarked machine unlearning methods on the MUFAC dataset, by implementing Knowledge Distillation based SCRUB and NegGrad from scratch to achieve 88% retain set accuracy and reducing forget set accuracy to 66%.",
+        "Engineered comprehensive privacy evaluation framework incorporating three Membership Inference Attack approaches (LiRA, Loss-based, Classifier-based), achieving membership detection rates of 40.13% (LiRA)."
+      ],
       "startDate": "2018-01-01",
       "endDate": "2018-01-01",
       "url": "https://example.com"

@@ -2,7 +2,7 @@
 layout: page
 title: personal
 permalink: /personal/
-description: A Journey Through My Lens
+description: Explore the world through my lens — a glimpse into the moments and perspectives that shape my journey.
 nav: true
 nav_order: 7
 ---
@@ -88,11 +88,11 @@ nav_order: 7
 }
 </style>
 
-# The world through my eyes
+### The world through my eyes
 
-*Where every photograph tells a story of discovery and wonder*
+*Every photograph tells a unique story of discovery, wonder, and connection.*
 
-## New York City, USA 🗽
+#### New York City, USA 🗽
 
 <div class="photo-grid">
     <div class="photo-item">
@@ -110,7 +110,7 @@ nav_order: 7
     </div>
 </div>
 
-## Musuem of Fine Arts, Boston
+#### Musuem of Fine Arts, Boston 🏛️
 
 <div class="photo-grid">
     <div class="photo-item">
@@ -170,7 +170,7 @@ nav_order: 7
     </div>
 </div>
 
-## Boston, USA 🎓
+#### Boston, USA 🌃
 
 <div class="photo-grid">
     <div class="photo-item">
@@ -237,7 +237,7 @@ nav_order: 7
     </div>
 </div>
 
-## Indian Institute of Technology, Madras 🎓
+#### Indian Institute of Technology, Madras 🎓
 
 <div class="photo-grid">
     <div class="photo-item">
@@ -262,7 +262,7 @@ nav_order: 7
     </div>
 </div>
 
-## Northeastern University
+#### Northeastern University 🎓
 
 <div class="photo-grid">
     <div class="photo-item">
@@ -280,7 +280,7 @@ nav_order: 7
     </div>
 </div>
 
-## Incredible India 🇮🇳
+#### Incredible India 🇮🇳
 
 <div class="photo-grid">
     <div class="photo-item">

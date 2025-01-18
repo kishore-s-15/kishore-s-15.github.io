@@ -37,7 +37,13 @@
             <a href="{{ content.url }}">{{ content.position }}</a>
           </h6>
           <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem">{{ content.name }}</h6>
-          <h6 class="ml-1 ml-md-4" style="font-size: 0.95rem; font-style: italic">{{ content.summary }}</h6>
+          <div class="ml-1 ml-md-4">
+            <ul class="summary-points" style="list-style-type: disc; padding-left: 20px;">
+              {% for point in content.summaryPoints %}
+                <li style="font-size: 0.95rem; margin-bottom: 8px;">{{ point }}</li>
+              {% endfor %}
+            </ul>
+          </div>
           <ul class="items">
             {% for item in content.highlights %}
               <li>
