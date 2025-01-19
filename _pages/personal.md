@@ -92,39 +92,22 @@ nav_order: 7
 
 *Every photograph tells a unique story of discovery, wonder, and connection.*
 
-#### New York City, USA 🗽
-
-<div class="photo-grid">
-    <div class="photo-item">
-        <div class="photo-container">
-            <img src="../assets/img/nyc/nyc_over_sea.jpg" alt="Times Square at night">
-        </div>
-        <div class="photo-caption">Flying over the seas of NYC</div>
-    </div>
-    
-    <div class="photo-item">
-        <div class="photo-container">
-            <img src="../assets/img/nyc/nyc_over_suburbs.jpg" alt="Central Park in autumn">
-        </div>
-        <div class="photo-caption">The Suburbs of NYC seen through an Airbus</div>
-    </div>
-</div>
 
 #### Musuem of Fine Arts, Boston 🏛️
 
 <div class="photo-grid">
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/mfa/mfa_1.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/mfa/mfa_1.jpg" alt="The Prudential Building, viewed from Huntington Avenue.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">The Prudential Building, viewed from Huntington Avenue.</div>
     </div>
     
     <!-- <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/mfa/mfa_2.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/mfa/mfa_2.jpg" alt="The Boston Skyline, as viewed from The Longfellow Bridge">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">The Boston Skyline, as viewed from The Longfellow Bridge</div>
     </div>
     
     <div class="photo-item">
@@ -170,95 +153,88 @@ nav_order: 7
     </div>
 </div>
 
-#### Boston, USA 🌃
+#### Boston, USA 🏙️
 
 <div class="photo-grid">
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_1.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_1.jpg" alt="The Prudential Building, viewed from Huntington Avenue.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">The Prudential Building, viewed from Huntington Avenue.</div>
     </div>
     
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_2.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_2.jpg" alt="The Boston Skyline, as viewed from The Longfellow Bridge">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">The Boston Skyline, as viewed from The Longfellow Bridge</div>
     </div>
     
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_3.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_3.jpg" alt="A misty morning in downtown Boston during the Farmer's Market.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">A misty morning in downtown Boston during the Farmer's Market.</div>
     </div>
 
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_4.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_4.jpg" alt="Mystic Generating Station near Assembly in Boston, showcasing its iconic smokestacks and wind turbine under a picturesque sky.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">Mystic Generating Station near Assembly in Boston, showcasing its iconic smokestacks and wind turbine under a picturesque sky.</div>
     </div>
 
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_5.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_5.jpg" alt="A glimpse of Downtown Boston.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">A glimpse of Downtown Boston.</div>
     </div>
 
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_6.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_6.jpg" alt="Artwork murals painted on the walls of a houses in Mission Main, Boston.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">Artwork murals painted on the walls of a houses in Mission Main, Boston.</div>
     </div>
 
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_7.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_7.jpg" alt="Murals adorning the walls of a house in Centre Street, Boston.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">Murals adorning the walls of a house in Centre Street, Boston.</div>
     </div>
 
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/boston_8.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/boston_8.jpg" alt="Trinity Church in Copley Square, Boston, seen from Clarendon Street.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">Trinity Church in Copley Square, Boston, seen from Clarendon Street.</div>
     </div>
 
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/boston/snowy_day.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/boston/snowy_day.jpg" alt="A snowy day along Washington Street.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">A snowy day along Washington Street.</div>
     </div>
 </div>
 
-#### Indian Institute of Technology, Madras 🎓
+#### New York City, USA 🗽
 
 <div class="photo-grid">
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/iitm_research_park/iitm_rp_1.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/nyc/nyc_over_sea.jpg" alt="Soaring above the waters of New York City.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">Soaring above the waters of New York City.</div>
     </div>
     
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/iitm_research_park/iitm_rp_3.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/nyc/nyc_over_suburbs.jpg" alt="The suburbs of NYC, as viewed from an Etihad Airbus.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
-    </div>
-
-    <div class="photo-item">
-        <div class="photo-container">
-            <img src="../assets/img/iitm_research_park/iitm.jpg" alt="Golden Gate Bridge">
-        </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">The suburbs of NYC, as viewed from an Etihad Airbus.</div>
     </div>
 </div>
 
@@ -280,21 +256,46 @@ nav_order: 7
     </div>
 </div>
 
+#### Indian Institute of Technology, Madras 🎓
+
+<div class="photo-grid">
+    <div class="photo-item">
+        <div class="photo-container">
+            <img src="../assets/img/iitm_research_park/iitm_rp_1.jpg" alt="IIT-Madras Research Park building, captured in a photograph.">
+        </div>
+        <div class="photo-caption">IIT-Madras Research Park building, captured in a photograph.</div>
+    </div>
+    
+    <!-- <div class="photo-item">
+        <div class="photo-container">
+            <img src="../assets/img/iitm_research_park/iitm_rp_3.jpg" alt="Another perspective on the IIT-Madras Research Park's striking architecture.">
+        </div>
+        <div class="photo-caption">Another perspective on the IIT-Madras Research Park's striking architecture.</div>
+    </div> -->
+
+    <div class="photo-item">
+        <div class="photo-container">
+            <img src="../assets/img/iitm_research_park/iitm.jpg" alt="A view of the Mechanical Sciences Block at IIT Madras.">
+        </div>
+        <div class="photo-caption">A view of the Mechanical Sciences Block at IIT Madras.</div>
+    </div>
+</div>
+
 #### Incredible India 🇮🇳
 
 <div class="photo-grid">
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/india/marina_chennai.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/india/marina_chennai.jpg" alt="A tranquil dawn at Marina Beach.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">A tranquil dawn at Marina Beach.</div>
     </div>
     
     <div class="photo-item">
         <div class="photo-container">
-            <img src="../assets/img/india/trivandrum_kerala.jpg" alt="Golden Gate Bridge">
+            <img src="../assets/img/india/trivandrum_kerala.jpg" alt="A serene lake in Trivandrum, Kerala, with a lone fisherman silhouetted in the distance.">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <div class="photo-caption">A serene lake in Trivandrum, Kerala, with a lone fisherman silhouetted in the distance.</div>
     </div>
 </div>
 
