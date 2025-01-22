@@ -1,80 +1,88 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: Cricshot Prediction
+description: AI-Powered Cricket Shot Classification & Similarity Analysis
+img: assets/img/projects/cricket_shot.png
+importance: 5
+category: personal
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Cricshot Prediction is an innovative deep learning system designed to analyze and classify cricket batting shots from video footage. By leveraging advanced CNN-GRU architecture and genetic algorithm-based optimization, the system achieves high accuracy in shot classification while also providing unique insights into shot similarities. This project demonstrates the practical application of AI in sports analytics, particularly in cricket coaching and player development.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Architecture
+
+The system employs a sophisticated hybrid architecture that combines Convolutional Neural Networks (CNN) with Gated Recurrent Units (GRU) to process both spatial and temporal features of cricket shots. The EfficientNet family serves as the backbone for feature extraction, while GRU units capture the temporal dynamics of batting movements.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/cricket_model_arch.png' | relative_url }}" alt="Model architecture showing CNN-GRU integration" title="Model Architecture"/>
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Complete model architecture showing the CNN-GRU integration for temporal-spatial feature processing
 </div>
+
+### Dataset Preparation & Enhancement
+
+The project utilizes the CrickShot10 dataset as its foundation, with several key enhancements to improve model robustness:
+- Removal of score overlay text to focus on pure shot mechanics
+- Implementation of horizontal flips to account for left and right-handed batting styles
+- Strategic dataset splitting (70-20-10) for comprehensive model evaluation
+- Temporal sampling of 30 frames per video to capture complete shot execution
+
+### Model Variants & Performance
+
+Three distinct model variants were developed and evaluated, each utilizing a different EfficientNet backbone:
+
+| Model | Test Accuracy | Precision | Recall | F1 Score |
+|-------|---------------|-----------|---------|-----------|
+| EfficientNetB0 | 94% | 94% | 94% | 94% |
+| EfficientNetV2B0 | 81% | 82% | 81% | 81% |
+| EfficientNetB4 | 74% | 75% | 74% | 74% |
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/genetic_algo.png' | relative_url }}" alt="Genetic Algorithm Optimization Process" title="Hyperparameter Optimization"/>
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Genetic algorithm-based hyperparameter optimization process and convergence
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Hyperparameter Optimization
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+A genetic algorithm-based approach was implemented for hyperparameter tuning, featuring:
+- Population-based exploration of learning rates (0.0001-0.02) and epochs (1-20)
+- Fitness evaluation based on validation accuracy
+- Tournament selection for parent chromosomes
+- Adaptive mutation rates to balance exploration and exploitation
+- Stagnation limit of 10 generations for efficient convergence
+
+### Shot Similarity Analysis
+
+The project introduces a novel approach to analyzing similarities between different cricket shots:
+- Feature extraction from the EfficientNet backbone's convolutional layers
+- Vector representation of shot characteristics
+- Cosine similarity computation between shot vectors
+- Validation through identical video comparison (100% similarity baseline)
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/shot_similarity.png' | relative_url }}" alt="Shot Similarity Analysis" title="Shot Similarity Matrix"/>
     </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Shot similarity matrix showing relationships between different cricket shots
 </div>
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Technical Implementation
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+The system leverages several key technologies and frameworks:
+- TensorFlow for model development and training
+- EfficientNet architectures for feature extraction
+- GRU units for temporal sequence processing
+- Custom genetic algorithm implementation for hyperparameter optimization
+- Streamlit for web interface development

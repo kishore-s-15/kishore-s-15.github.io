@@ -1,81 +1,67 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+title: MemeSense
+description: A Multimodal Framework for Meme Analysis using Enhanced CLIP
+img: assets/img/projects/meme_sense.png
 importance: 3
-category: work
+category: personal
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+MemeSense is a sophisticated multimodal framework that leverages OpenAI's CLIP architecture for comprehensive meme analysis. The system combines feature adapters and cosine classifiers with a semantic-aware initialization strategy to achieve high-performance classification across multiple tasks. By implementing a multi-modal architecture with enhanced CLIP features, the system effectively processes both visual and textual components of memes to perform tasks such as humor detection, hate speech identification, target classification, and stance analysis.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Architecture
+
+The MemeSense framework is built upon a multi-component architecture designed to process both visual and textual elements of memes through specialized modules. Its core implementation uses CLIP's pre-trained knowledge combined with custom feature adapters and a semantic-aware initialization strategy. This design enables efficient processing of multimodal content while maintaining the rich pre-trained knowledge of the CLIP model.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/memeclip_architecture.png' | relative_url }}" alt="Complete system architecture of MemeSense" title="Complete system architecture of MemeSense"/>
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Complete system architecture showing CLIP encoders, feature adapters, and classification components
 </div>
+
+### Base Architecture and Feature Processing
+
+The system utilizes CLIP's Vision Transformer (ViT-L/14) for processing images and a text encoder for handling textual content. The vision encoder processes 224x224 RGB images through 24 transformer layers, while the text encoder handles up to 77 tokens through 12 transformer layers. Both encoders output 768-dimensional feature vectors that capture rich semantic information from their respective modalities. These base encoders are kept frozen to preserve CLIP's pre-trained knowledge while additional components are trained for task-specific optimization.
+
+### Feature Adaptation and Enhancement
+
+Building on the base architecture, MemeSense implements a sophisticated feature adaptation mechanism. The system first projects the initial 768-dimensional features to a higher 1024-dimensional space using configurable linear projection layers. These projected features then pass through specialized adapter modules that modify them for specific tasks while maintaining a connection to the original features through residual integration. The adapter modules implement a bottleneck architecture, reducing the feature dimension by a factor of 4 before restoration, allowing for efficient task-specific adaptations.
+
+### Semantic-Aware Classification
+
+The classification mechanism employs a novel semantic-aware initialization strategy that leverages CLIP's pre-trained understanding of concepts. This approach initializes classifier weights using CLIP's semantic knowledge of the target classes, creating more meaningful decision boundaries from the start. The classification process uses cosine similarity with temperature scaling, allowing the model to make confident predictions while maintaining semantic relationships between features and class representations.
+
+### Technical Implementation
+
+The complete model comprises 3,675,136 parameters and implements several key technical components:
+
+- **Feature Projection**: Configurable depth projection layers that map CLIP features to higher dimensions
+- **Adapter Modules**: Bottleneck architecture for task-specific feature adaptation
+- **Residual Integration**: Weighted combination of adapted and projected features (0.2:0.8 ratio)
+- **Cosine Classification**: Temperature-scaled (30) cosine similarity for final predictions
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/meme_training.png' | relative_url }}" alt="MemeSense Training Process" title="MemeSense Training Process"/>
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Training pipeline showing data processing, feature extraction, and classification components
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Performance Evaluation
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+The system demonstrates strong performance across multiple classification tasks:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **Humor Recognition**: 80.27% accuracy with 85.59% AUC
+- **Hate Speech Detection**: 76.06% accuracy with 84.52% AUC
+- **Target Identification**: 66.12% accuracy with 81.66% AUC
+- **Stance Classification**: 62.00% accuracy with 80.11% AUC
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+The model was trained on the PrideMM dataset comprising 5,063 annotated memes, with 4,666 samples for training and 397 for validation. Training utilized a batch size of 16, learning rate of 1e-4, and weight decay of 1e-4 over 10 epochs, employing Cross Entropy Loss with mean reduction for optimization.

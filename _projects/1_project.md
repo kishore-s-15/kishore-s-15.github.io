@@ -4,7 +4,7 @@ title: Curriculum Compass
 description: A RAG Chatbot for Personalized Course Guidance
 img: assets/img/projects/course_curriculum.png
 importance: 1
-category: academic
+category: personal
 related_publications: false
 ---
 

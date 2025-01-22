@@ -1,81 +1,39 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: ML Olympiad - Autism Prediction Challenge
+description: A Two-Level Stacking Ensemble Classifier for Autism Prediction
+img: assets/img/projects/autism_prediction.png
 importance: 2
-category: work
-giscus_comments: true
+category: personal
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project presents an advanced machine learning solution developed for the ML Olympiad's Autism Prediction Challenge. The system implements a sophisticated two-level stacking ensemble classifier that combines multiple powerful algorithms to achieve high-accuracy autism prediction. By addressing the inherent challenges of unbalanced medical data and employing robust validation techniques, the system achieved remarkable performance with an AUC-ROC score of 0.943 on the test set.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Architecture
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+The system's architecture is built around a two-level stacking ensemble that strategically combines multiple base estimators with a meta-learner. The first level consists of four powerful base classifiers: XGBoost, LightGBM, CatBoost, and Random Forest. These diverse algorithms each bring their unique strengths to the ensemble, capturing different aspects of the underlying patterns in the data. The second level employs a Logistic Regression model as the meta-learner, which learns to optimally combine the predictions from the base estimators.
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Data Processing and Balance
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+A critical challenge in medical diagnosis problems is dealing with unbalanced datasets, where one class (typically the negative class) significantly outnumbers the other. To address this, the system implements the SMOTE (Synthetic Minority Over-sampling Technique) algorithm. SMOTE creates synthetic examples of the minority class by interpolating between existing instances, helping to balance the dataset without simple replication of existing samples. This approach ensures that the model learns equally well from both positive and negative cases.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+### Model Training and Validation
 
-{% raw %}
+The training process employs stratified k-fold cross-validation to ensure robust performance evaluation across all data segments. This technique maintains the same proportion of samples for each class in all folds, which is particularly important given the unbalanced nature of the dataset. The validation strategy provides reliable performance estimates and helps prevent overfitting.
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+### Hyperparameter Optimization
 
-{% endraw %}
+To maximize model performance, the system utilizes a Bayesian tuning framework for hyperparameter optimization. This approach efficiently explores the hyperparameter space for each base estimator and the meta-learner, making intelligent decisions about which combinations to try based on previous results.
+
+### Technical Implementation
+
+The implementation leverages several key machine learning libraries and techniques:
+
+- Scikit-learn for the base Random Forest classifier and meta-learner
+- XGBoost, LightGBM, and CatBoost for gradient boosting implementations
+- Imbalanced-learn library for SMOTE implementation
+- Optuna for Bayesian hyperparameter optimization
+- Scikit-learn's StratifiedKFold for cross-validation

@@ -1,80 +1,73 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: Pencil2Pixel
+description: Enhancing Forensic Sketch-to-Image Generation with Advanced Preprocessing
+img: assets/img/projects/pencil2pixel.webp
+importance: 4
+category: personal
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+Pencil2Pixel presents an innovative approach to forensic sketch-to-image generation using Generative Adversarial Networks (GANs) with advanced preprocessing techniques. The system demonstrates significant improvements in image quality through gamma inversion preprocessing, achieving SSIM scores up to 0.8076 and PSNR values up to 23.015, compared to baseline scores of 0.7025 and 18.40 respectively. This project introduces a dual-phase training approach where GANs are first trained with standard sketches and then re-trained with gamma-inverted sketches, showing marked improvements in visual quality.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Architecture
+
+The system implements a dual-architecture approach with a U-Net Generator and PatchGAN Discriminator, designed to optimize both feature extraction and image generation quality. The U-Net Generator provides progressive feature compression and expansion through encoder-decoder paths with skip connections, while the PatchGAN Discriminator employs five convolutional layers for enhanced local feature discrimination.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/gan_architecture.png' | relative_url }}" alt="Complete system architecture showing generator and discriminator components" title="Complete system architecture showing generator and discriminator components"/>
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Complete system architecture showing U-Net Generator and PatchGAN Discriminator architectures with preprocessing pipeline
 </div>
+
+### Base Architecture and Processing Pipeline
+
+The system utilizes a comprehensive processing pipeline that includes:
+- Gamma inversion preprocessing for enhanced sketch quality
+- U-Net Generator with progressive feature compression/expansion
+- PatchGAN Discriminator with batch normalization and LeakyReLU activation
+- Skip connections between corresponding encoder and decoder layers
+- Patch-based output for local feature discrimination
+
+### Feature Enhancement and Training Process
+
+The training process implements several sophisticated components:
+- Separate Adam optimizers for generator and discriminator
+- Combined adversarial and L1 losses for improved training stability
+- Regular evaluation using L1 loss on validation set
+- Early stopping mechanisms to prevent overfitting
+- Systematic grid search for optimal hyperparameter tuning
+
+### Technical Implementation
+
+The model implementation includes several key technical components:
+
+- **Generator Architecture**: Encoder-decoder path with skip connections
+- **Discriminator Design**: Five-layer convolutional network with progressive downsampling
+- **Preprocessing Pipeline**: Gamma inversion and image enhancement techniques
+- **Training Strategy**: Dual-phase approach with alternating discriminator and generator updates
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/training_pipeline.png' | relative_url }}" alt="Training pipeline showing preprocessing and model components" title="Training pipeline showing preprocessing and model components"/>
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Training pipeline showing preprocessing steps, model components, and evaluation metrics
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Performance Evaluation
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+The system demonstrates significant improvements across key metrics:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- **SSIM Score**: Improved from 0.7025 (baseline) to 0.8076 (+15.0%)
+- **PSNR Value**: Enhanced from 18.40 to 23.015 (+25.1%)
+- **Grid Search Results**: Optimal performance achieved with learning rate of 0.005, batch size of 8, and dropout rate of 0.1
+- **Training Stability**: Consistent convergence across multiple runs with early stopping
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+The model was extensively evaluated through grid search over various hyperparameters including learning rates [0.0002, 0.0005, 0.001, 0.005], batch sizes [8, 16, 32, 64], and dropout rates [0.1, 0.3, 0.5], utilizing combined loss functions for optimization.
