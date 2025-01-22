@@ -1,81 +1,68 @@
 ---
 layout: page
-title: project 7
-description: with background image
-img: assets/img/4.jpg
+title: Evolving Machine Unlearning
+description: Benchmarking Privacy-Preserving Unlearning Methods on Real-World Facial Datasets
+img: assets/img/projects/unlearning.png
 importance: 7
-category: work
-related_publications: true
+category: academic
+related_publications: false
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+### Overview
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project explores and benchmarks machine unlearning methods using the MUFAC facial dataset, demonstrating practical applications in privacy-preserving machine learning. The research implements and evaluates multiple unlearning approaches, with a particular focus on knowledge distillation-based techniques like SCRUB and gradient-based methods like NegGrad. The project also introduces a novel approach called MUNCHing (Machine Unlearning via Naive Checkpointing) that achieves superior performance in terms of both computational efficiency and unlearning effectiveness.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Technical Implementation
+
+The implementation centers around the MUFAC dataset, specifically tailored for multi-class facial age estimation across eight distinct categories. Our experimental framework utilizes ResNet-18 as the backbone architecture, chosen for its widespread adoption in machine unlearning research and its ability to facilitate comparative analysis against established benchmarks.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/unlearning_comparison.png' | relative_url }}" alt="Comparison of different unlearning methods" title="Performance comparison across unlearning methods"/>
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    Performance comparison showing accuracy retention and forgetting effectiveness across different unlearning methods
 </div>
+
+### Key Innovations
+
+The project makes several significant contributions to the field of machine unlearning:
+
+1. **MUNCHing Algorithm**: Developed a novel unlearning approach based on naive checkpoint approximations that achieves state-of-the-art performance in balancing computational efficiency and unlearning effectiveness.
+
+2. **Comprehensive Evaluation Framework**: Engineered a robust privacy evaluation system incorporating three distinct Membership Inference Attack (MIA) approaches:
+   - LiRA (Likelihood Ratio Attack)
+   - Loss-based MIA
+   - Classifier-based MIA
+
+3. **Benchmarking Implementation**: Successfully implemented and benchmarked multiple existing approaches including SCRUB and NegGrad, achieving 88% retain set accuracy while reducing forget set accuracy to 66%.
+
+### Privacy Evaluation Results
+
+Our evaluation framework revealed interesting insights about the effectiveness of different unlearning methods:
+
+- The LiRA attack achieved a 40.13% membership detection rate on baseline models
+- MUNCHing demonstrated superior resistance to membership inference attacks compared to existing methods
+- SCRUB and UNSIR showed high utility preservation but incomplete unlearning
+- NegGrad achieved the best forgetting metrics but at a significant cost to utility
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/projects/unlearning_metrics.png' | relative_url }}" alt="Privacy evaluation metrics" title="Privacy evaluation metrics across different methods"/>
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Comparison of membership inference attack success rates and computational efficiency across different unlearning methods
 </div>
 
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+### Impact and Future Work
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+This research contributes to the growing field of privacy-preserving machine learning by providing:
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+- A systematic comparison of existing unlearning methods
+- A novel, efficient unlearning algorithm (MUNCHing)
+- A comprehensive evaluation framework for assessing unlearning effectiveness
+- Practical insights into the trade-offs between utility preservation and privacy protection
 
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+Future work includes expanding the evaluation to multiple datasets with different modalities and developing theoretical bounds for checkpoint estimation errors. The project is actively being developed into a Python library for benchmarking machine unlearning algorithms, scheduled for release in May 2025.   
