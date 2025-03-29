@@ -100,7 +100,7 @@ nav_order: 7
         <div class="photo-container">
             <img src="../assets/img/mfa/mfa_1.jpg" alt="The Prudential Building, viewed from Huntington Avenue.">
         </div>
-        <div class="photo-caption">The Prudential Building, viewed from Huntington Avenue.</div>
+        <!-- <div class="photo-caption">The Prudential Building, viewed from Huntington Avenue.</div> -->
     </div>
     
     <!-- <div class="photo-item">
@@ -128,15 +128,8 @@ nav_order: 7
         <div class="photo-container">
             <img src="../assets/img/mfa/mfa_5.JPG" alt="Golden Gate Bridge">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <!-- <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div> -->
     </div>
-<!-- 
-    <div class="photo-item">
-        <div class="photo-container">
-            <img src="../assets/img/mfa/mfa_6.jpg" alt="Golden Gate Bridge">
-        </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
-    </div> -->
 
     <!-- <div class="photo-item">
         <div class="photo-container">
@@ -149,7 +142,7 @@ nav_order: 7
         <div class="photo-container">
             <img src="../assets/img/mfa/mfa_8.JPG" alt="Golden Gate Bridge">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <!-- <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div> -->
     </div>
 </div>
 
@@ -245,14 +238,14 @@ nav_order: 7
         <div class="photo-container">
             <img src="../assets/img/northeastern_university/neu_1.jpg" alt="Golden Gate Bridge">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <!-- <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div> -->
     </div>
     
     <div class="photo-item">
         <div class="photo-container">
             <img src="../assets/img/northeastern_university/neu_2.jpg" alt="Golden Gate Bridge">
         </div>
-        <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div>
+        <!-- <div class="photo-caption">An iconic symbol of engineering and beauty, shrouded in morning fog</div> -->
     </div>
 </div>
 
