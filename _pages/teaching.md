@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses I have taught or served as a teaching assistant.
+description:
 nav: true
 nav_order: 5
 ---
@@ -49,7 +49,7 @@ nav_order: 5
 <div class="post">
   <div class="teaching-entry">
     <div class="teaching-title">Graduate Teaching Assistant</div>
-    <div class="teaching-subtitle">CS 5100 - Foundations of Artificial Intelligence | Prof. Raj Venkat</div>
+    <div class="teaching-subtitle">CS 4100 & CS 5100 - Foundations of Artificial Intelligence | Prof. Raj Venkat</div>
     <div class="teaching-meta">
       Khoury College of Computer Sciences, Northeastern University<br/>
       January 2024 - Present
