@@ -27,3 +27,7 @@ Previously, I've worked as a Full-stack Data Scientist at an IIT-Madras Incubate
 My research areas of interest include Adversarial Machine Learning, Deep Generative Modeling, Deep Learning and Multimodal Machine Learning. Currently, I am collaborating with Prof. Predrag Radivojac on Membership Inference Attack algorithms for human genomics classifiers.
 
 I'm actively looking for ML-based research-oriented Full-time opportunities starting May 2025.
+
+<div class="resume-button" style="margin-top: 2rem; text-align: center;">
+  <a href="{{ site.baseurl }}/assets/pdf/kishore_sampath_resume.pdf" class="btn" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background-color 0.3s;">View Resume</a>
+</div>
