@@ -4,7 +4,7 @@ title: personal
 permalink: /personal/
 description: Explore the world through my lens — a glimpse into the moments and perspectives that shape my journey.
 nav: true
-nav_order: 7
+nav_order: 6
 ---
 
 <style>
